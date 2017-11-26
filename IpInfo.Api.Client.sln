@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpInfo.Api.Client", "IpInfo.Api.Client\IpInfo.Api.Client.csproj", "{A2C6A5DC-2C81-498E-A01A-3A3E1828D75F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B47D52D2-8543-4B98-89E9-581116D2E989}"
+	ProjectSection(SolutionItems) = preProject
+		appveyor.yml = appveyor.yml
+		codecov.yml = codecov.yml
+		CONTRIBUTING.md = CONTRIBUTING.md
+		ISSUE-TEMPLATE.md = ISSUE-TEMPLATE.md
+		PULLREQUEST-TEMPLATE.md = PULLREQUEST-TEMPLATE.md
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpInfo.Api.Client.Test", "IpInfo.Api.Client.Test\IpInfo.Api.Client.Test.csproj", "{609DD405-7410-4E39-967B-885ED59E14C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A2C6A5DC-2C81-498E-A01A-3A3E1828D75F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C6A5DC-2C81-498E-A01A-3A3E1828D75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C6A5DC-2C81-498E-A01A-3A3E1828D75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C6A5DC-2C81-498E-A01A-3A3E1828D75F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{609DD405-7410-4E39-967B-885ED59E14C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{609DD405-7410-4E39-967B-885ED59E14C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{609DD405-7410-4E39-967B-885ED59E14C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{609DD405-7410-4E39-967B-885ED59E14C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4BF0B16-A417-4FAC-B0F3-513923779A26}
+	EndGlobalSection
+EndGlobal

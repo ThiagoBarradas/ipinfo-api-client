@@ -1,0 +1,43 @@
+image: Visual Studio 2017
+platform: Any CPU
+
+environment:
+  version: $(APPVEYOR_BUILD_VERSION)
+
+configuration:
+- Release
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '%version%'
+  package_version: '%version%'
+  assembly_version: '%version%'
+  file_version: '%version%'
+  informational_version: '%version%'
+
+before_build:
+- choco install opencover.portable
+- choco install codecov
+- dotnet restore
+
+build:
+  project: IpInfo.Api.Client.sln
+
+test_script:
+  - OpenCover.Console.exe -oldstyle -register:user -target:"C:/Program Files/dotnet/dotnet.exe" -targetargs:"test --logger:trx;LogFileName=results.trx /p:DebugType=full IpInfo.Api.Client.Test\IpInfo.Api.Client.Test.csproj" -filter:"+[IpInfo.Api.Client*]* -[IpInfo.Api.Client.Test*]*" -output:".\coverage.xml"
+  - codecov -f .\coverage.xml -t %CODECOV_TOKEN%
+
+after_test:
+  - dotnet pack --configuration Release /p:Version=%version%
+
+artifacts:
+  - path: IpInfo.Api.Client\bin\Release\netstandard2.0\IpInfo.Api.Client.dll
+    name: IpInfo.Api.Client.dll
+  - path: IpInfo.Api.Client\bin\Release\IpInfo.Api.Client..%version%.nupkg
+    name: IpInfo.Api.Client.%version%.nupkg
+
+deploy:
+  provider: NuGet
+  api_key:
+    secure: hb5jOmzsvUKCtOP41EFtc/lwXAOh5auC5KAi2Ok9i/FmTuo2F36yzEgaPiT9olsB
