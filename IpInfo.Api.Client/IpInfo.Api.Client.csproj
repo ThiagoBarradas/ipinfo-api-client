@@ -10,6 +10,7 @@
     <RepositoryUrl>https://github.com/ThiagoBarradas/ipinfo-api-client</RepositoryUrl>
     <PackageProjectUrl>https://github.com/ThiagoBarradas/ipinfo-api-client</PackageProjectUrl>
     <PackageIconUrl>http://www.elephee.com/images/elephee-icon.png</PackageIconUrl>
+    <PackageTags>IpInfo Ip Info Geolocation Client</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
