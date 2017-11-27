@@ -34,7 +34,7 @@ after_test:
 artifacts:
   - path: IpInfo.Api.Client\bin\Release\netstandard2.0\IpInfo.Api.Client.dll
     name: IpInfo.Api.Client.dll
-  - path: IpInfo.Api.Client\bin\Release\IpInfo.Api.Client..%version%.nupkg
+  - path: IpInfo.Api.Client\bin\Release\IpInfo.Api.Client.%version%.nupkg
     name: IpInfo.Api.Client.%version%.nupkg
 
 deploy:
